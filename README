@@ -1,0 +1,38 @@
+README
+
+General instructions
+The dataset(IamOnDb) in npy format after the preprocess step and read step can be found on DGX-2(Path: /workspace/data/src_hit_word_beam_edition). Otherwise download the dataset and run the preprocess.py and read.py in order.
+
+
+STEPS TO RUN:
+
+1. Decoder folder contains all the tried decoders:
+	a. BS --> Beam Search without LM
+	b. BS_LM --> Beam Search with LM
+	c. WBS --> Word Beam Search
+	d. Greedy --> Best path decoder
+
+
+	Use the corresponding model file with the Predict file to test
+	Run predict_*corresponding_decoder*.py
+	Make sure the appropriate model, checkpoints are included.
+ 
+
+2. corpus folder contains the different corpora used for experimentation. Use them in the appropriate Predict.py file
+
+3. checkpoints folder contains the most updated training checkpoints which have given best results overall. Use the exact name of the checkpoints in the predict methods or while restoring the models.
+
+4. The Random_indices folder(test_files.npy) contains the random set that we chose while training. The file itself contains a random permutation of the lines, of which ~75% are used for training and ~25% for testing.
+
+5. Training folder contains the file required to run the code on training. Use the model.py in greedy decoder for speedy results.
+
+6. CTCWordBeamSearch folder contains the package required to run Word Beam Search. This folder won't be required for other decoding methods.
+
+7. BSPLINE_ON_SAMSUNG contains the files which preprocess samsung dataset and upsample the same by using Bspline fit.
+ 
+
+
+
+
+
+
