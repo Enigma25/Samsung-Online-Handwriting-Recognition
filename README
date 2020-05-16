@@ -1,4 +1,4 @@
-README
+
 
 General instructions
 The dataset(IamOnDb) in npy format after the preprocess step and read step can be found on DGX-2(Path: /workspace/data/src_hit_word_beam_edition). Otherwise download the dataset and run the preprocess.py and read.py in order.
